@@ -1,0 +1,9 @@
+.vs
+*.tlog
+*.obj
+*.exe
+*.log
+**/Debug/**
+*.user
+*.filters
+
