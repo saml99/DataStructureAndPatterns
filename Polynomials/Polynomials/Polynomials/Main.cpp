@@ -7,17 +7,19 @@ using namespace std;
 int main()
 {
 	Polynomial A;
-	cout << "Specify first polynomial (degree followed by coefficients):" << endl;
+	cout << "Specify polynomial" << endl;
 	cin >> A;
 	cout << "A = " << A << endl;
 
-	Polynomial B;
-	cout << "Specify second polynomial (degree followed by coefficiets:)" << endl;
-	cin >> B;
-	cout << "B = " << B << endl;
+	double x;
+	cout << "Specify the value of x:" << endl;
+	cin >> x;
 
-	Polynomial C = A * B;
-	cout << "C = A * B = " << C << endl;
+	cout << "A(x) = " << A(x) << endl;
+
+	cout << "Indefinite integral of A = " << A.computeIndefiniteIntegral() << endl;
+
+	cout << "Definite integral of A(xlow=0, xhigh=12.0) = " << A.calculateDefiniteIntegral(0, 12.0) << endl;
 
 	return 0;
 }

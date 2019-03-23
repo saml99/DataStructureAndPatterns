@@ -1,8 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include <cmath>
 
-#define MAX_DEGREE 20+1		// max degree = 10 + 10 + 1, 0 to 20
+#define MAX_DEGREE 20+1+1		// max degree = 10 + 10 + 1, 0 to 20
 
 class Polynomial
 {
@@ -25,4 +26,10 @@ public:
 
 	// output operator for polynomials
 	friend std::ostream& operator<<(std::ostream& aOStream, const Polynomial& aObject);
+
+	double operator() (double aX) const;
+
+	Polynomial computeIndefiniteIntegral() const;
+
+	double calculateDefiniteIntegral(double aXLow, double aXHigh) const;
 };
